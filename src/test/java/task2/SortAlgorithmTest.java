@@ -87,5 +87,14 @@ class SortAlgorithmTest {
         assertTrue(Arrays.equals(excepted2, actual2));
     }
 
+    @Test
+    public void partOfArray(){
+        int start = 0;
+        int end = 3;
+        int excepted[] = {15, 23, 28, 35};
 
+        int[] actual = new SortAlgorithm(new int[]{35, 28, 23, 15, 12, 10, 6, 4}, start, end).msort();
+
+        assertTrue(Arrays.equals(excepted, Arrays.copyOfRange(actual, start, end + 1)));
+    }
 }
