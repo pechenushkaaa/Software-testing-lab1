@@ -1,3 +1,4 @@
+package task1;
 
 import task1.TaylorSeries;
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class TaylorSeriesTest {
     private static TaylorSeries actual;
+    private static final double ACCURACY = 0.00001;
 
     @BeforeAll
     public static void setup() {
@@ -16,17 +18,17 @@ class TaylorSeriesTest {
 
     @Test
      public void secBorderConditionsEquality() throws EpsilonLimitException {
-        assertEquals(1.0, actual.sec(0), 0.0001);
+        assertEquals(1.0, actual.sec(0), ACCURACY);
         assertThrows(ArithmeticException.class, () -> actual.sec(Math.PI / 2));
-        assertEquals(-1.0, actual.sec(Math.PI), 0.0001);
+        assertEquals(-1.0, actual.sec(Math.PI), ACCURACY);
         assertThrows(ArithmeticException.class, () -> actual.sec(-Math.PI / 2));
     }
 
     @Test
     public void secOtherConditionsEquality() throws EpsilonLimitException {
-        assertEquals(Math.sqrt(2), actual.sec(Math.PI / 4), 0.0001);
-        assertEquals(2, actual.sec(Math.PI / 3), 0.0001);
-        assertEquals(2 * Math.sqrt(3) / 3, actual.sec(Math.PI / 6), 0.0001);
+        assertEquals(Math.sqrt(2), actual.sec(Math.PI / 4), ACCURACY);
+        assertEquals(2, actual.sec(Math.PI / 3), ACCURACY);
+        assertEquals(2 * Math.sqrt(3) / 3, actual.sec(Math.PI / 6), ACCURACY);
     }
 
     @Test

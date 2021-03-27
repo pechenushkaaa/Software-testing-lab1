@@ -1,3 +1,5 @@
+package task2;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import task2.SortAlgorithm;
