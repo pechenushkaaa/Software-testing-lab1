@@ -1,4 +1,4 @@
-package task3;
+package task3.model;
 
 public class Door {
     private boolean openStatus;

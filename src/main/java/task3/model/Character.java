@@ -1,4 +1,4 @@
-package task3;
+package task3.model;
 
 public class Character {
     private static final String DEFAULT_NAME = "No name";
@@ -6,7 +6,7 @@ public class Character {
 
     private final String role;
     private final String name;
-    private final int force;
+    private int force;
 
     public Character(String role) {
         this.name = DEFAULT_NAME;
@@ -23,6 +23,11 @@ public class Character {
     public int getForce() {
         return force;
     }
+
+    public void setForce(int force) {
+        this.force = force;
+    }
+
 
     @Override
     public String toString() {
