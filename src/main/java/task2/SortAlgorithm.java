@@ -10,7 +10,7 @@ public class SortAlgorithm {
         this.a = a;
         b = new int[a.length];
         begin = startPosition;
-        end = endPosition - 1;
+        end = endPosition;
     }
 
     public SortAlgorithm(int[] a){
